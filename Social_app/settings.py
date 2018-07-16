@@ -27,11 +27,17 @@ SECRET_KEY = 'g9w=&dex4m+u_8@p$hz0l(d2kwmunrykv56q#_pv9%1q)($bce'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'fireice93@gmail.com'
+EMAIL_HOST_PASSWORD = 'Imperium01@#$**'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 LOGIN_REDIRECT_URL = reverse_lazy('dashboard')#widok, do którego ma nastąpić pzekierowanie, gdy widok contrib.auth.views.login nie otrzymuje parametru next
 LOGIN_URL = reverse_lazy('login') #adres URL do któego ma nastąpić przekierowanie po zalogowaniu użytkownika np. za pomocą dekoratora login_required
 LOGOUT_URL = reverse_lazy('logout') #adres, do którego ma nastąpić przekierowanie użytkownika po wylogowaniu
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #umożliwienie Django wysyłania maili
 # Application definition
 
 INSTALLED_APPS = [
