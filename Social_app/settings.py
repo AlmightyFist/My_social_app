@@ -38,6 +38,10 @@ LOGIN_URL = reverse_lazy('login') #adres URL do któego ma nastąpić przekierow
 LOGOUT_URL = reverse_lazy('logout') #adres, do którego ma nastąpić przekierowanie użytkownika po wylogowaniu
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #umożliwienie Django wysyłania maili
+
+#umożliwienie Django obsługę plików multimedialnych
+MEDIA_URL = '/media/' #bazowy adres URL określający lokalizację do przechowywania plików multimedialnych
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/') #lokalna ścieżka dostępu do plików multimedialnych 
 # Application definition
 
 INSTALLED_APPS = [

@@ -18,5 +18,6 @@ urlpatterns = [
     url(r'^password-reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$',password_reset_confirm,name='password_reset_confirm'), #3 wygenerowany automatycznie URL umożliwiający wprowadzenie nowego hasła
     path('password_reset/complete', password_reset_complete, name='password_reset_complete'), #4 potwierdzenie zmiany hasła, link do logowania
     path('register/', views.register, name='register'),
+    path('edit/', views.edit, name='edit'),
 
     ]
